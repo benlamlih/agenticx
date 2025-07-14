@@ -16,7 +16,7 @@ import (
 
 func (s *Server) RegisterRoutes(_ context.Context, tp trace.TracerProvider) http.Handler {
 	r := gin.Default()
-	r.Use(otelgin.Middleware("contract_ease", otelgin.WithTracerProvider(tp)))
+	r.Use(otelgin.Middleware("agenticx", otelgin.WithTracerProvider(tp)))
 
 	cfg := config.LoadConfig()
 	frontendURL := cfg.App.FrontendURL
@@ -55,7 +55,7 @@ func (s *Server) apiReferenceHandler(c *gin.Context) {
 	htmlContent, err := scalar.ApiReferenceHTML(&scalar.Options{
 		SpecURL: "./docs/build/openapi.yaml",
 		CustomOptions: scalar.CustomOptions{
-			PageTitle: "ContractEase API",
+			PageTitle: "AgenticX API",
 		},
 		Theme:    "deepSpace",
 		Layout:   "modern",
