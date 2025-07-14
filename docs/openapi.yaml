@@ -1,0 +1,13 @@
+openapi: 3.1.0
+info:
+  title: AgenticX API
+  version: '1.0'
+  description: API endpoints for the AgenticX service
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+paths:
+  /api/health:
+    get:
+      $ref: 'components/paths/health.yaml#/health'

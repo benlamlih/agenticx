@@ -1,0 +1,10 @@
+Health:
+  type: object
+  required:
+    - status
+  properties:
+    status:
+      type: string
+      description: Indicates the health status of the service
+      enum: [ up, down ]
+      example: up

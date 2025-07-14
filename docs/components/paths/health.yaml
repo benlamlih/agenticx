@@ -1,0 +1,18 @@
+health:
+  summary: Check database connectivity
+  description: Performs a health check by verifying if the application can connect to the database.
+  operationId: healthCheck
+  security: [ ]
+  tags:
+    - Health
+  responses:
+    '200':
+      description: Database connection successful
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/health.yaml#/Health'
+    '401':
+      $ref: '../responses/4xx.yaml#/Unauthorized'
+    '500':
+      $ref: '../responses/5xx.yaml#/InternalServerError'

@@ -1,0 +1,21 @@
+InternalServerError:
+  description: Internal server error
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          title:
+            type: string
+            description: Human readable error title
+            examples:
+              - "Internal server error"
+          detail:
+            type: string
+            description: Human readable error description
+            examples:
+              - "An unexpected error occurred"
+        required:
+          - type
+          - title
+          - detail

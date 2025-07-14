@@ -1,0 +1,15 @@
+Unauthorized:
+  description: Unauthorized – No authentication token provided
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          title:
+            type: string
+            description: Human readable error title
+            examples:
+              - "Missing authentication"
+              - "Token expired"
+        required:
+          - title

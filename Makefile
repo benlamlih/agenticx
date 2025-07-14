@@ -46,7 +46,7 @@ migrate-down:
 build-openapi:
 	@echo "Bundling OpenAPI spec..."
 	@mkdir -p docs/build
-	npx @redocly/cli bundle docs/openapi/openapi.yaml --output docs/build/openapi.yaml
+	npx @redocly/cli bundle docs/openapi.yaml --output docs/build/openapi.yaml
 	npx @redocly/cli lint docs/build/openapi.yaml --skip-rule=no-empty-servers --skip-rule=no-server-example.com
 
 mocks:
