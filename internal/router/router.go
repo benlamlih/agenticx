@@ -2,9 +2,10 @@ package router
 
 import (
 	"context"
-	"github.com/benlamlih/agenticx/internal/config"
 	"log/slog"
 	"net/http"
+
+	"github.com/benlamlih/agenticx/internal/config"
 
 	scalar "github.com/MarceloPetrucio/go-scalar-api-reference"
 	"github.com/gin-contrib/cors"
@@ -13,7 +14,7 @@ import (
 	"go.opentelemetry.io/otel/trace"
 )
 
-func (s *Server) RegisterRoutes(ctx context.Context, tp trace.TracerProvider) http.Handler {
+func (s *Server) RegisterRoutes(_ context.Context, tp trace.TracerProvider) http.Handler {
 	r := gin.Default()
 	r.Use(otelgin.Middleware("contract_ease", otelgin.WithTracerProvider(tp)))
 

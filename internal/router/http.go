@@ -3,11 +3,12 @@ package router
 import (
 	"context"
 	"fmt"
-	"github.com/benlamlih/agenticx/internal/config"
-	database "github.com/benlamlih/agenticx/internal/repository"
 	"net/http"
 	"strconv"
 	"time"
+
+	"github.com/benlamlih/agenticx/internal/config"
+	database "github.com/benlamlih/agenticx/internal/repository"
 
 	"go.opentelemetry.io/otel/trace"
 )

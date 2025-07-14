@@ -5,7 +5,6 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	"github.com/benlamlih/agenticx/internal/config"
 	"log"
 	"log/slog"
 	"net/http"
@@ -23,6 +22,7 @@ import (
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
 
+	"github.com/benlamlih/agenticx/internal/config"
 	server "github.com/benlamlih/agenticx/internal/router"
 )
 
