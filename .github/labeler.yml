@@ -1,0 +1,18 @@
+# Add labels based on branch name patterns
+enhancement:
+  - head-branch: ['^feat/', 'feature']
+
+bug:
+  - head-branch: ['^fix/']
+
+refactor:
+  - head-branch: ['^refactor/']
+
+# Add labels based on file patterns
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: '**/*.md'
+
+github-actions:
+  - changed-files:
+    - any-glob-to-any-file: '.github/workflows/*' 

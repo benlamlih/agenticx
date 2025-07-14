@@ -1,0 +1,12 @@
+app:
+  port: "8080"
+  frontend_url: "http://localhost:5173"
+  otel_endpoint: "http://localhost:5080"
+
+db:
+  user: ${DB_USER}
+  password: ${DB_PASSWORD}
+  name: ${DB_NAME}
+  port: ${DB_PORT}
+  host: "localhost"
+  schema: "public"
